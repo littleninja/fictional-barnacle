@@ -49,7 +49,7 @@ gitGraph
   commit
 ```
 
-If you try to push the semantic commit to `develop` like before, you'll get an error message like this one:
+If you try to push the semantic commit to `develop` like before, you'll get an error message:
 
 ```shell
 git push origin HEAD:staging
@@ -63,11 +63,11 @@ git push origin HEAD:staging
 ```
 
 Instead of pushing, we can rebase. This will:
-1. rewinds commits on `develop` (commit 7)
-1. applies commits from `main` (commit 6, semantic release)
-1. replays new commits on `develop` (commit 7)
+1. rewind commits on `develop` (commit 7)
+1. apply commits from `main` (commit 6, semantic release)
+1. replay new commits on `develop` (commit 7)
 
-Doing a rebase rewrites the commit history and requires force-push. Using `--force-with-lease` option is slightly safer and should fail if another commit (commit 8) is added between `git fetch` and `git push`.
+Doing a rebase rewrites the commit history and requires force-push--a little spooky 👻 because it overwrites the remote branch with our local one. Using `--force-with-lease` option is slightly safer: it should fail if another commit (commit 8) is added between `git fetch` and `git push`.
 
 ```shell
 git checkout main
