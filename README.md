@@ -52,7 +52,7 @@ gitGraph
 If you try to push the semantic commit to `develop` like before, you'll get an error message:
 
 ```shell
-git push origin HEAD:staging
+git push origin HEAD:develop
 # To github.com:littleninja/fictional-barnacle.git
 # ! [rejected]        HEAD -> develop (non-fast-forward)
 # error: failed to push some refs to 'github.com:littleninja/fictional-barnacle.git'
