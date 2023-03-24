@@ -67,7 +67,7 @@ Instead of pushing, we can rebase. This will:
 1. apply commits from `main` (commit 6, semantic release)
 1. replay new commits on `develop` (commit 7)
 
-Doing a rebase rewrites the commit history and requires force-push--a little spooky 👻 because it overwrites the remote branch with our local one. Using `--force-with-lease` option is slightly safer: it should fail if another commit (commit 8) is added between `git fetch` and `git push`.
+Doing a rebase rewrites the commit history and requires force-push--a little spooky 👻 because it overwrites the remote branch and we could lose commits merged by another developer. Using `--force-with-lease` option is slightly safer: it should fail if another commit (commit 8) is added between `git fetch` and `git push`.
 
 ```shell
 git checkout main
