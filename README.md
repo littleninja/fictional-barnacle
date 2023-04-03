@@ -73,6 +73,7 @@ Doing a rebase rewrites the commit history and requires force-push--a little spo
 git checkout main
 npx semantic-release
 git fetch
-git rebase main develop
+git checkout develop
+git rebase main
 git push --force-with-lease
 ```
